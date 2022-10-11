@@ -79,15 +79,15 @@ export const Index = () => {
 
           <Box
             sx={{
-              p: 8,
-              width: "600px",
+              p: { md: 8, sm: 4, xs: 1 },
+              width: { sm: "600px" },
               m: "auto",
             }}
           >
             <form>
               <Stack direction="column" spacing={3}>
                 <Stack direction="row" alignItems="center" spacing={5}>
-                  <Typography>Firstname :</Typography>
+                  <Typography>Firstname:</Typography>
                   <TextField
                     variant="outlined"
                     label="Firstname"
@@ -98,7 +98,7 @@ export const Index = () => {
                 </Stack>
 
                 <Stack direction="row" alignItems="center" spacing={5}>
-                  <Typography>Lastname :</Typography>
+                  <Typography>Lastname:</Typography>
                   <TextField
                     variant="outlined"
                     label="Lastname"
@@ -108,7 +108,7 @@ export const Index = () => {
                   />
                 </Stack>
                 <Stack direction="row" alignItems="center" spacing={8}>
-                  <Typography>Mail Id :</Typography>
+                  <Typography>Mail Id:</Typography>
                   <TextField
                     id="mail"
                     type="email"
@@ -120,7 +120,7 @@ export const Index = () => {
                 </Stack>
 
                 <Stack direction="row" alignItems="center" spacing={4}>
-                  <Typography>Contact No :</Typography>
+                  <Typography>Contact No:</Typography>
                   <TextField
                     id="contact"
                     type="number"
@@ -129,9 +129,17 @@ export const Index = () => {
                     }}
                   />
                 </Stack>
-                <Stack direction="row" alignItems="center" spacing={9}>
-                  <Stack direction="row" alignItems="center" spacing={10}>
-                    <Typography>Date :</Typography>
+                <Stack
+                  direction={{ sm: "column", md: "row" }}
+                  alignItems={{ sm: "center" }}
+                  spacing={{ md: 9, xs: 4 }}
+                >
+                  <Stack
+                    direction="row"
+                    alignItems="center"
+                    spacing={{ md: 10, xs: 8 }}
+                  >
+                    <Typography>Date:</Typography>
                     <TextField
                       id="date"
                       type="date"
@@ -140,8 +148,12 @@ export const Index = () => {
                       }}
                     />
                   </Stack>
-                  <Stack direction="row" alignItems="center" spacing={7}>
-                    <Typography>Time :</Typography>
+                  <Stack
+                    direction="row"
+                    alignItems={{ md: "center", xs: "center" }}
+                    spacing={{ md: 7, xs: 9 }}
+                  >
+                    <Typography>Time:</Typography>
                     <TextField
                       id="time"
                       type="time"
@@ -151,8 +163,8 @@ export const Index = () => {
                     />
                   </Stack>
                 </Stack>
-                <Stack direction="row" alignItems="center" spacing={11}>
-                  <Typography>Row : </Typography>
+                <Stack direction="row" alignItems="center" spacing={10}>
+                  <Typography>Row: </Typography>
                   <TextField
                     id="row"
                     type="number"
@@ -162,7 +174,7 @@ export const Index = () => {
                   />
                 </Stack>
 
-                <Stack direction="row" alignItems="center" spacing={8}>
+                <Stack direction="row" alignItems="center" spacing={7}>
                   <Typography>Seat No: </Typography>
                   <TextField
                     id="row"

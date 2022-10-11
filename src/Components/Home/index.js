@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -18,21 +18,29 @@ export const Index = () => {
   }, [show]);
 
   return (
-    <div>
-      <Grid
-        container
-        columnSpacing={3}
-        rowSpacing={10}
+    <Box
+      sx={{
+        py: 5,
+      }}
+    >
+      <Typography
+        align="center"
         sx={{
-          p: 7,
+          fontSize: "2.5rem",
+          fontWeight: "bold",
+          pb: 5,
         }}
       >
+        Tv Shows
+      </Typography>
+      <Grid container columnSpacing={3} rowSpacing={10}>
         {show &&
           show.map((item) => (
             <Grid
               item
-              xs={2}
-              sm={3}
+              xs={12}
+              sm={6}
+              md={3}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -66,7 +74,7 @@ export const Index = () => {
             </Grid>
           ))}
       </Grid>
-    </div>
+    </Box>
   );
 };
 export default Index;

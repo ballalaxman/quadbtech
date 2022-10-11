@@ -29,10 +29,10 @@ export const Index = () => {
         alignItems="center"
         alignContent={"center"}
       >
-        <Grid item xs={3}>
+        <Grid item md={3} sm={12}>
           <img src={item?.show?.image.original} width="100%" height="500px" />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item md={9} sm={12}>
           <Stack>
             <Typography
               sx={{
@@ -42,7 +42,7 @@ export const Index = () => {
             >
               {item?.show?.name}
             </Typography>
-            <Stack direction="row" spacing={10}>
+            <Stack direction={{ sm: "column", md: "row" }} spacing={10}>
               <Stack spacing={3}>
                 <Stack>
                   <Typography
@@ -140,7 +140,7 @@ export const Index = () => {
                     padding: "0rem",
                   }}
                   dangerouslySetInnerHTML={{
-                    __html: `${item?.show.summary}`,
+                    __html: `${item?.show?.summary}`,
                   }}
                 />
               </Typography>
